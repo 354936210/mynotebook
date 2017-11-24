@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#bababa"
+    tools:context="com.owangwang.mynotebook.MainActivity"
+    >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/mainViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+                </android.support.v4.view.ViewPager>
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#26A69A"
+                    android:orientation="horizontal">
+
+                        <RadioButton
+                            android:button="@null"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableTop="@drawable/radio_notebook"
+                            android:id="@+id/radio_1"
+                            android:text="记事"
+                            android:textColor="@color/radio_text_color"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:button="@null"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableTop="@drawable/radio_send"
+                            android:id="@+id/radio_2"
+                            android:text="传递"
+                            android:textColor="@color/radio_text_color"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:button="@null"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableTop="@drawable/radio_collection"
+                            android:id="@+id/radio_3"
+                            android:text="资源"
+                            android:textColor="@color/radio_text_color"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <RadioButton
+                            android:button="@null"
+                            android:layout_gravity="center_horizontal"
+                            android:drawableTop="@drawable/radio_home"
+                            android:id="@+id/radio_4"
+                            android:text="个人"
+
+                            android:textColor="@color/radio_text_color"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                </RadioGroup>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/fg_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:name="com.owangwang.mynotebook.LeftFragment"
+            tools:layout="@layout/left_layout" />
+
+</android.support.v4.widget.DrawerLayout>
+
+
+
